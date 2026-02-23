@@ -2,6 +2,7 @@ from tabulate import tabulate
 import matplotlib.pyplot as plt
 import platform
 import subprocess
+import os
 
 class CLIView:
     def show_menu(self, current_turn: int):
@@ -54,8 +55,12 @@ class CLIView:
 
     def _open_image(self, file_name: str):
         try:
-            if platform.system() == 'Darwin': 
+            if platform.system() == 'Darwin':       # macOS
                 subprocess.call(('open', file_name))
+            elif platform.system() == 'Windows':    # Windows
+                os.startfile(file_name)
+            else:                                   # Linux
+                subprocess.call(('xdg-open', file_name))
         except: pass
 
     def get_input(self, p): return input(f"👉 {p}: ").strip()
