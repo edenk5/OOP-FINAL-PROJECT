@@ -54,7 +54,7 @@ class CLIView:
 
     def _open_image(self, file_name: str):
         try:
-            if platform.system() == 'Darwin': # macOS auto-open
+            if platform.system() == 'Darwin': 
                 subprocess.call(('open', file_name))
         except: pass
 
