@@ -49,4 +49,4 @@
 ## 🛠 התקנה והרצה
 1. **שיבוט המאגר (Clone):**
    ```bash
-   git clone [https://github.com/edenking333/oop-final-project.git](https://github.com/edenking333/oop-final-project.git)
+   git clone [git clone https://github.com/edenk5/oop-final-project.git)
